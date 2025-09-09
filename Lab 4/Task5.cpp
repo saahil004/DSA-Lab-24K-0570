@@ -71,6 +71,17 @@ class Salaries {
         }
         
       }
+
+      ~Salaries() {
+        Node* prev;
+        while (head != nullptr)
+        {
+            prev = head;
+            head = head->next;
+            delete prev;
+        }
+        
+      }
 };
 
 int main() {
